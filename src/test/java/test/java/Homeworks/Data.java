@@ -1,5 +1,5 @@
 
-package Homeworks;
+package test.java.Homeworks;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

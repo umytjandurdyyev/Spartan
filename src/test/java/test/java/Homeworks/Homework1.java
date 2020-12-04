@@ -1,12 +1,12 @@
-package Homeworks;
+package test.java.Homeworks;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import utilities.ConfigurationReader;
-import utilities.ExcelUtil;
+import test.java.utilities.ConfigurationReader;
+import test.java.utilities.ExcelUtil;
 
 import java.math.BigDecimal;
 
@@ -22,6 +22,29 @@ public class Homework1 {
     //2-Download csv file
     //3-Using testng data provider and apache poi create data driven posting from spartan
 
+    /*
+    POST Body Response
+    {
+    "success": "A Spartan is Born!",
+    "data": {
+        "id": 110,
+        "name": "Donald",
+        "gender": "Male",
+        "phone": 1234567891
+    }
+
+    POST Body --> raw --> JSON
+
+    {
+        "gender":"Male",
+        "name": "Donald",
+        "phone": 1234567891
+    }
+
+
+}
+     */
+
     @BeforeClass
     public void beforeClass(){
         baseURI= ConfigurationReader.get("spartan_api_url");
@@ -29,8 +52,10 @@ public class Homework1 {
 
     @DataProvider
     public Object[][] spartanTest(){
+        //src/test/java/test/resources/MOCK_DATA (1).xlsx
+        //src/test/java/test/resources/MOCK_DATA.xlsx
 
-        ExcelUtil spartan = new ExcelUtil("src/test/resources/MOCK_DATA.xlsx","spartan");
+        ExcelUtil spartan = new ExcelUtil("src/test/java/test/resources/MOCK_DATA (1).xlsx","spartan");
 
         String [][] dataArray = spartan.getDataArrayWithoutFirstRow();
 

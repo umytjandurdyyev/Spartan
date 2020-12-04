@@ -1,19 +1,16 @@
-package Homeworks;
+package test.java.Homeworks;
 
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
-import utilities.ConfigurationReader;
+import test.java.utilities.ConfigurationReader;
 
 import java.util.List;
 import java.util.Map;
 
-import static io.restassured.RestAssured.*;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.*;
 import static org.hamcrest.Matchers.equalTo;
-import static org.testng.Assert.*;
 
 public class Homework2 {
     //Homework-2

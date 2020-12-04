@@ -1,4 +1,4 @@
-package utilities;
+package test.java.utilities;
 
 import java.io.FileInputStream;
 import java.util.Properties;

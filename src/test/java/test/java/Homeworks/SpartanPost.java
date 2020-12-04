@@ -1,4 +1,4 @@
-package Homeworks;
+package test.java.Homeworks;
 
 public class SpartanPost {
 

@@ -1,4 +1,4 @@
-package utilities;
+package test.java.utilities;
 
 import org.apache.poi.ss.usermodel.*;
 import org.testng.Assert;
